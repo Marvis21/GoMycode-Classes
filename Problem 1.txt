@@ -1,0 +1,22 @@
+Algorithm SumDistinct(Set1[1..n1], Set2[1..n2])
+    sum ← 0
+
+    // Elements of Set1 not in Set2
+    for i ← 1 to n1
+        found ← false
+        for j ← 1 to n2
+            if Set1[i] == Set2[j]
+                found ← true
+        if found == false
+            sum ← sum + Set1[i]
+
+    // Elements of Set2 not in Set1
+    for j ← 1 to n2
+        found ← false
+        for i ← 1 to n1
+            if Set2[j] == Set1[i]
+                found ← true
+        if found == false
+            sum ← sum + Set2[j]
+
+    return sum

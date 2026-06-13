@@ -1,0 +1,21 @@
+Function dot_product(v1[1..n], v2[1..n], n) : real
+    ps ← 0
+    for i ← 1 to n
+        ps ← ps + v1[i] * v2[i]
+    return ps
+End Function
+
+
+Algorithm CheckOrthogonality
+    Read n
+    Read nbPairs
+
+    for k ← 1 to nbPairs
+        Read v1[1..n]
+        Read v2[1..n]
+
+        if dot_product(v1, v2, n) == 0
+            display "Pair ", k, ": vectors are orthogonal"
+        else
+            display "Pair ", k, ": vectors are NOT orthogonal"
+End Algorithm
