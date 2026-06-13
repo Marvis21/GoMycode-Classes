@@ -1,0 +1,17 @@
+length ← 0
+words ← 1          // start at 1 since words = spaces + 1
+vowels ← 0
+
+repeat
+    read character
+    length ← length + 1
+
+    if character == ' '
+        words ← words + 1
+
+    if character is one of 'a','e','i','o','u','A','E','I','O','U'
+        vowels ← vowels + 1
+
+until character == '.'
+
+display length, words, vowels
